@@ -1,5 +1,10 @@
 Rails.application.routes.draw do
-  get 'example/test'
+  resources :line_items
+
+  resources :glists
+
+  resources :items
+  #  get 'example/test'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

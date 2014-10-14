@@ -5,3 +5,43 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+item_list = [
+  #Vegetables
+"Asparagus",
+"Broccoli",
+"Carrots",
+"Cauliflower",
+"Celery",
+"Corn",
+"Cucumbers",
+"Lettuce - Greens",
+"Mushrooms",
+"Onions",
+"Peppers",
+"Potatoes",
+"Spinach",
+"Squash",
+"Zucchini",
+"Tomatoes",
+  # fruits
+"Apples",
+"Avocados",
+"Bananas",
+"Berries",
+"Cherries",
+"Grapefruit",
+"Grapes",
+"Kiwis",
+"Lemons - Limes",
+"Melon",
+"Nectarines",
+"Oranges",
+"Peaches",
+"Pears",
+"Plums"
+]
+
+item_list.each do |name|
+        Item.create(name: name)
+end
