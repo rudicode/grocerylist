@@ -10,14 +10,15 @@ class LineItemsController < ApplicationController
   # GET /line_items/1
   # GET /line_items/1.json
   def show
-    
+
   end
 
   # GET /line_items/new
   def new
     @line_item = LineItem.new
+    @line_item.glist_id = 1 # TODO: this should come from a parameter indicating which
+      # glist id should be used.
   end
-
   # GET /line_items/1/edit
   def edit
   end
@@ -29,7 +30,7 @@ class LineItemsController < ApplicationController
 
     respond_to do |format|
       if @line_item.save
-        format.html { redirect_to @line_item, notice: 'Line item was successfully created.' }
+        format.html { redirect_to @line_item.glist, notice: 'Line item was successfully created.' }
         format.json { render :show, status: :created, location: @line_item }
       else
         format.html { render :new }

@@ -1,13 +1,13 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Glist:</strong>
-  <%= @line_item.glist_id %>
+  <strong>List Name:</strong>
+  <%= @line_item.glist.name %>
 </p>
 
 <p>
-  <strong>Item:</strong>
-  <%= @line_item.item_id %>
+  <strong>Item Name:</strong>
+  <%= @line_item.item.name %>
 </p>
 
 <%= link_to 'Edit', edit_line_item_path(@line_item) %> |
