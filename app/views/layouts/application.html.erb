@@ -8,6 +8,10 @@
 </head>
 <body>
 <h1>Grocerylist.com</h1>
+<div class="menu">
+	<%= link_to 'Your Lists', glists_path %> |
+	<%= link_to 'All Items', items_path %>
+</div>
 
 <%= yield %>
 
