@@ -22,7 +22,7 @@ After all the gems have been installed, you need to copy the database example
 cp config/database.yml.example config/database.yml
 ```
 
-And now you can setup the datbase:
+And now you can setup the database:
 
 ```
 rake db:setup
@@ -34,4 +34,12 @@ rails server
 ```
 
 Point your browser to:[http://localhost:3000](http://localhost:3000) , You should get the main page of the app.
+
+## Start Using the app.
+
+- Create a new list
+- Add items to the list.
+- Go to the Items list and add new types of items.
+- Remove items.
+- Remove a list.
 
