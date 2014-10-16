@@ -1,15 +1,17 @@
 TODO
+====
 
 Main APP
 
 - add main menu to header for quick navigation.
 - add users, this way each user will only see their own lists.
 - line_items should have a quantity
+
+BUGS
 - When creating a new line item the proper list needs to be selected automatically. currently it defaults to the first list.
-- after creating a new list_item the current glist index page should be displayed.
 
 TDD
-- start using rspec for testing
+- now that the app has basic functionality,start using rspec for testing
 
 Style
 - add css and start styling the pages

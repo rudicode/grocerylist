@@ -14,6 +14,10 @@ class ItemsController < ApplicationController
 		@item = Item.new
 	end
 
+	# GET /items/1/edit
+  def edit
+  end
+
   # POST /items
 	def create
 		@item = Item.new(item_params)
@@ -21,6 +25,15 @@ class ItemsController < ApplicationController
 			redirect_to items_url, notice: 'Item Succesfully saved'
 		else
 			render :new
+		end
+	end
+
+	# PATCH/PUT /items/1
+	def update
+		if @item.update(item_params)
+			redirect_to items_url, notice: 'Item was updated.'
+		else
+			render :edit
 		end
 	end
 
