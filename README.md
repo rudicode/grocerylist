@@ -33,5 +33,5 @@ Next start the rails server localy
 rails server
 ```
 
-Point your browser to: http://localhost:3000 , You should get the main page of the app.
+Point your browser to:[http://localhost:3000](http://localhost:3000) , You should get the main page of the app.
 
