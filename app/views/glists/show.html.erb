@@ -2,11 +2,7 @@
 
 <p>
   <strong>List Name:</strong>
-  <%= @glist.name %>
-
-
-<%= link_to 'Edit', edit_glist_path(@glist) %> |
-<%= link_to 'Back', glists_path %>
+<%= link_to @glist.name, edit_glist_path(@glist) %>
 </p>
 <br>
 <table>
@@ -20,10 +16,10 @@
   <tbody>
     <% @all_line_items.each do |line_item| %>
       <tr>
-        <td><%= line_item.item.name %></td>
-        <td><%= link_to 'Show', line_item %> |</td>
-        <td><%= link_to 'Edit', edit_line_item_path(line_item) %> |</td>
-        <td><%= link_to 'Destroy', line_item, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to line_item.item.name, edit_line_item_path(line_item) %></td>
+        <td> | </td>
+
+        <td><%= link_to '[X]', line_item, method: :delete, data: { confirm: "Remove #{line_item.item.name}\n\nfrom the list: #{@glist.name}\n\nAre you sure?" } %></td>
       </tr>
     <% end %>
       </tbody>

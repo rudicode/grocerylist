@@ -11,10 +11,9 @@
   <tbody>
     <% @glists.each do |glist| %>
       <tr>
-        <td><%= glist.name %></td>
-        <td><%= link_to 'Show', glist %></td>
-        <td><%= link_to 'Edit', edit_glist_path(glist) %></td>
-        <td><%= link_to 'Destroy', glist, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to glist.name, glist %></td>
+        <td> | </td>
+        <td><%= link_to '[X]', glist, method: :delete, data: { confirm: "Remove List\n\n#{glist.name}\n\nAre you sure?" } %></td>
       </tr>
     <% end %>
   </tbody>
