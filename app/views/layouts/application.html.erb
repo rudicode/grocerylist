@@ -17,9 +17,15 @@
   <%= link_to 'Your Lists', glists_path %> |
   <%= link_to 'All Items', items_path %>
 </div>
+<% if flash[:notice] %>
+  <div data-alert class="alert-box radius">
+    <%= flash[:notice] %>
+  </div>
+<% end %>
 
+<!-- start yield -->
     <%= yield %>
-    
+<!-- end   yield -->
     <%= javascript_include_tag "application" %>
   </body>
 </html>
