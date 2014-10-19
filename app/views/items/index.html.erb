@@ -1,5 +1,5 @@
 <h1>List of Grocery Items</h1>
-<p><%= link_to 'Add New Item', new_item_path, class: "button" %></p> 
+<p><%= link_to '<i class="fi-plus"></i> New Item'.html_safe, new_item_path, class: "button" %></p> 
 <table>
   <thead>
     <tr>
@@ -15,7 +15,7 @@
         <td><%= link_to item.name, item %></td>-->
         <td><%= link_to item.name, edit_item_path(item) %></td>
         <td> | </td>
-        <td><%= link_to '[X]', item, method: :delete, data: { confirm: "Remove #{item.name}\n\nAre you sure?" } %></td>
+        <td><%= link_to '<i class="fi-x"></i>'.html_safe, item, method: :delete, data: { confirm: "Remove #{item.name}\n\nAre you sure?" } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -23,4 +23,4 @@
 
 <br>
 
-<%= link_to 'Add New Item', new_item_path, class: "button" %>
+<%= link_to '<i class="fi-plus"></i> New Item'.html_safe, new_item_path, class: "button" %>

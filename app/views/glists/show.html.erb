@@ -2,7 +2,7 @@
   <strong>List Name:</strong>
 <%= link_to @glist.name, edit_glist_path(@glist) %>
 </p>
-<br>
+<%= link_to '<i class="fi-plus"></i> Add Item to List'.html_safe, new_line_item_path, class: "button" %>
 <table>
   <thead>
     <tr>
@@ -17,10 +17,10 @@
         <td><%= link_to line_item.item.name, edit_line_item_path(line_item) %></td>
         <td> | </td>
 
-        <td><%= link_to '[X]', line_item, method: :delete, data: { confirm: "Remove #{line_item.item.name}\n\nfrom the list: #{@glist.name}\n\nAre you sure?" } %></td>
+        <td><%= link_to '<i class="fi-x"></i>'.html_safe, line_item, method: :delete, data: { confirm: "Remove #{line_item.item.name}\n\nfrom the list: #{@glist.name}\n\nAre you sure?" } %></td>
       </tr>
     <% end %>
       </tbody>
 </table>
 <br>
-<%= link_to 'New Line item', new_line_item_path %>
+<%= link_to '<i class="fi-plus"></i> Add Item to List'.html_safe, new_line_item_path, class: "button" %>

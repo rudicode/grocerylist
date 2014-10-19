@@ -1,6 +1,6 @@
 <!-- start glists/index.html.erb -->
 <h1>All Your Grocery Lists</h1>
-
+<%= link_to '<i class="fi-plus"></i> New List'.html_safe, new_item_path, class: "button" %>
 <table>
   <thead>
     <tr>
@@ -14,7 +14,7 @@
       <tr>
         <td><%= link_to glist.name, glist %></td>
         <td> | </td>
-        <td><%= link_to '[X]', glist, method: :delete, data: { confirm: "Remove List\n\n#{glist.name}\n\nAre you sure?" } %></td>
+        <td><%= link_to '<i class="fi-x"></i>'.html_safe, glist, method: :delete, data: { confirm: "Remove List\n\n#{glist.name}\n\nAre you sure?" } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -22,5 +22,5 @@
 
 <br>
 
-<%= link_to 'New List', new_glist_path, class: "button radius"%>
+<%= link_to '<i class="fi-plus"></i> New List'.html_safe, new_glist_path, class: "button radius"%>
 <!-- end glists/index.html.erb -->
